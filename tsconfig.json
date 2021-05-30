@@ -1,0 +1,19 @@
+{
+    "ts-node": {
+      "files": true
+    },
+    "compilerOptions": {
+      "outDir": "./build",
+      "target": "es5",
+      "allowJs": true,
+      "strict": true,
+      "module": "CommonJS",
+      "esModuleInterop": true,
+      "isolatedModules": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "moduleResolution": "node"
+    },
+    "include": ["src"],
+}
+  

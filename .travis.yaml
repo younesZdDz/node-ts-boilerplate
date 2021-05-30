@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - 'stable'
+
+sudo: required
+
+services:
+  - 'docker'
+
+cache:
+  directories:
+    - 'node_modules'
+
+before_script:
+  - npm install
+
+script:
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+    make deploy; else make test; fi
